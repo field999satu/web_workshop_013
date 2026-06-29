@@ -68,7 +68,6 @@
             color: #00ff4c;
         }
 
-        /* ปุ่ม Back to home ด้านล่าง */
         .bt {
             margin-left: 70px;
             margin-bottom: 50px;
@@ -94,7 +93,36 @@
             font-size: 20px;
             color: #5e5e5e;
         }
-        .h1-label { background: #216dfa;}
+        .h1-label { background: #216dfa;
+            padding: 2px 5px;
+            border-radius: 5px;
+            
+        }
+        .h2-label { background: #fa21ae;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        .h3-label { background: #cffa21;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        .h4-label { background: #21fa5b;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        .h5-label { background: #fa2125;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        .h6-label { background: #faae21;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        .list li {
+            margin-bottom: 15px;
+        }
+        
+
     </style>
 </head>
 
@@ -113,13 +141,13 @@
         <div class="card">
             <h2>ความหมายของ Headings (H1–H6)</h2>
             <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
-            <ul>
+            <ul class="list">
                 <li> <span class="h1-label">H1</span> – หัวข้อใหญ่สุดใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
-                <li> H2 – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
-                <li> H3 – หัวข้อย่อยภายใน H2</li>
-                <li> H4 – ย่อยลงไปอีกระดับ</li>
-                <li> H5 – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
-                <li> H6 – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+                <li> <span class="h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+                <li> <span class="h3-label">H3</span> – หัวข้อย่อยภายใน H2</li>
+                <li> <span class="h4-label">H4</span> – ย่อยลงไปอีกระดับ</li>
+                <li> <span class="h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+                <li> <span class="h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
             </ul> <p class="note">H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
         </div>
 
@@ -144,6 +172,5 @@
         </div>
     </div>
 
-    <a href="index.html" class="bt">back to home 👅</a>
 </body>
 </html>
