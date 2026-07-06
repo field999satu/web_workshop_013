@@ -23,10 +23,10 @@
             text-align: center;
         }
         pre {
-            background-color: #ececec;
+            background-color: #707070;
             padding: 10px;
             border-radius: 20px;
-            border-left: 5px solid #1fff8f7e;
+            
         }
 
         .container {
@@ -48,14 +48,28 @@
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 8px #707070;
-            padding: 10px 50px 50px;
             margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .card-margin{ margin-bottom: 20px;}
+        .card-header{
+            background-color: #ececec;
+            color: #216dfa;
+            padding: 10px 20px;
+            font: size 20px;;
+            font-weight: 10px;
+        }
+        .card-body{
+        padding: 20px;
         }
         .hero {
             
             padding: 50px 0;
         }
-        
+        .tag-color{
+            color: rgb(0, 112, 112);
+            font-weight: bold;
+        }
         a {
             text-decoration: none;
             color: #ffffff;
@@ -122,7 +136,22 @@
             margin-bottom: 15px;
         }
         
-
+        .text-shade-h1{color: #0c39ff;}
+        .text-shade-h2{color: #2a51ff;}
+        .text-shade-h3{color: #5372ff;}
+        .text-shade-h4{color: #6d88ff;}
+        .text-shade-h5{color: #a7b7ff;}
+        .text-shade-h6{color: #e0e5ff;}
+.tip-box {
+            border-top: 3px solid red;
+            background-color: #ebdaff;
+            box-shadow: #37004d;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #707070;
+            margin-bottom: 30px;
+            font-size: 15px;
+            
+        }
     </style>
 </head>
 
@@ -136,23 +165,31 @@
     <div class="container">
         <section class="hero">
             <h1 class="hero-text-h1">แบบฝึกปฏิบัติ HTML heading</h1>
-            <p class="hero-text-p">ฝึกใช้แท็ก &lt;h1> – &lt;h6> และการปรับขนาดหัวข้อด้วย CSS</p>
+            <p class="hero-text-p">ฝึกใช้แท็ก<span class="tag-color"> &lt;h1 – &lt;h6> </span>และการปรับขนาดหัวข้อด้วย CSS</p>
         </section>
+        <!-- card1 -->
         <div class="card">
-            <h2>ความหมายของ Headings (H1–H6)</h2>
-            <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+            <div class="card-header">
+                <h2>ความหมายของ Headings (H1–H6)</h2>
+            </div>
+            <div class="card-body">
+            <p class="card-margin">HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
             <ul class="list">
-                <li> <span class="h1-label">H1</span> – หัวข้อใหญ่สุดใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
-                <li> <span class="h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
-                <li> <span class="h3-label">H3</span> – หัวข้อย่อยภายใน H2</li>
-                <li> <span class="h4-label">H4</span> – ย่อยลงไปอีกระดับ</li>
-                <li> <span class="h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
-                <li> <span class="h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+                <p class="card-margin"> <span class="h1-label">H1</span> – หัวข้อใหญ่สุดใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</p>
+                <p class="card-margin"> <span class="h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</p>
+                <p class="card-margin"> <span class="h3-label">H3</span> – หัวข้อย่อยภายใน H2</p>
+                <p class="card-margin"> <span class="h4-label">H4</span> – ย่อยลงไปอีกระดับ</p>
+                <p class="card-margin"> <span class="h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</p>
+                <p class="card-margin"> <span class="h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</p>
             </ul> <p class="note">H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+            </div>
         </div>
-
+<!-- card2 -->
         <div class="card">
+            <div class="card-header">
             <h2>ตัวอย่างการใช้ H1–H6</h2>
+            </div>
+            <div class="card-body">
             <pre><code>
 &lt;h1>Welcome to My Website&lt;/h1>
 &lt;h2>HTML Basics&lt;/h2>
@@ -163,14 +200,19 @@
             </code></pre>
             
             <p>เมื่อแสดงผลจะได้ขนาดลดลงแบบนี้</p>
-            <h1>H1: Welcome to My Website</h1>
-            <h2>H2: HTML Basics</h2>
-            <h3>H3: What is HTML?</h3>
-            <h4>H4: HTML Syntax</h4>
-            <h5>H5: Example Code</h5>
-            <h6>H6: Note about heading size</h6>
+            <h1 class="text-shade-h1">H1: Welcome to My Website</h1>
+            <h2 class="text-shade-h2">H2: HTML Basics</h2>
+            <h3 class="text-shade-h3">H3: What is HTML?</h3>
+            <h4 class="text-shade-h4">H4: HTML Syntax</h4>
+            <h5 class="text-shade-h5">H5: Example Code</h5>
+            <h6 class="text-shade-h6">H6: Note about heading size</h6>
+            </div>
+        </div>
+        <!-- card3 -->
+        <div class="tip-box ">
+        <p><b>Tip:</b> Use only one %lt;h1> per page - it represents the main topic or title.</p>
+        <p>Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.</p>
         </div>
     </div>
-
 </body>
 </html>
