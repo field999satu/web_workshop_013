@@ -7,10 +7,10 @@ body {
   background-color: rgb(243, 243, 243);
 }
 
-footer,
+footer
 /* .hero, */
 /* .card, */
-.tip-box {
+/* .tip-box */{
   border: 1px solid;
   background-color: white;
   margin: 20px;
@@ -207,4 +207,52 @@ pre {
   justify-content: center;
   align-items: center;
   color: #ffffff;
+}
+
+/* ==========================================
+   สไตล์สำหรับกล่องเกร็ดความรู้ (Tip Box)
+   ========================================== */
+.tip-box {
+  background-color: #fffdf0;    /* สีพื้นหลังเหลืองครีมอ่อนละมุน */
+  border: 1px solid #fcd34d;    /* เส้นขอบสีเหลืองทอง */
+  border-radius: 16px;          /* ปรับขอบให้มนสวยงาม */
+  margin: 20px;
+  padding: 24px 24px 24px 90px; /* เว้นพื้นที่ด้านซ้าย 90px เพื่อหลบให้ไอคอน */
+  position: relative;           /* เพื่อให้ไอคอนอิงตำแหน่งกึ่งกลางได้ */
+  min-height: 98px;             /* คุมความสูงขั้นต่ำให้สมดุลกับไอคอน */
+}
+
+
+.tip-box::before {
+
+  background-color: #ffca28;    
+  width: 50px;
+  height: 50px;      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.tip-box h1 {
+  color: #b45309;              
+  font-size: 18px;
+  margin: 0 0 8px 0;           
+  font-weight: bold;
+}
+
+
+.tip-box p {
+  color: #4b5563;               
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;           
+}
+.tip-box strong, 
+.tip-box em, 
+.tip-box mark {
+  color: #0066ff;               
+  background: transparent;    
+  padding: 0;
+  font-style: normal;         
+  font-weight: bold;           
 }
