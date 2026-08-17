@@ -4,8 +4,8 @@
   padding: 0;
 }
 body {
-  font-family: "Segoe UI",Sriracha, Tahoma, Geneva, Verdana, sans-serif;
-  background-color: aquamarine;
+  font-family: "Segoe UI", Sriracha, Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
@@ -19,18 +19,24 @@ body {
   padding: 15px;
   margin: 15px; */
 
-  background:linear-gradient(90deg,#006eaeef,#50b6ffe1,#ffbae2fd,#7073fff7);
+  background: linear-gradient(
+    90deg,
+    #10a7ffef,
+    #50b6ffe1,
+    #ffbae2fd,
+    #ed29fff7
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
-.main-layout{
+.main-layout {
   /* border: 1px solid #7410ff;
   padding: 15px;
   margin: 15px; */
   display: grid;
-  grid-template-columns: 7fr 3fr; 
+  grid-template-columns: 7fr 3fr;
   gap: 16px;
 
   padding: 20px 22px 0;
@@ -41,12 +47,12 @@ body {
   margin: 15px;
 }
 .brand {
-/* border: 1px solid #ff1da1;
+  /* border: 1px solid #ff1da1;
   padding: 15px;
   margin: 15px; */
 
   display: flex;
-  align-items:center ;
+  align-items: center;
   gap: 15px;
 
   color: #ffffff;
@@ -55,22 +61,19 @@ body {
   font-size: 14px;
   opacity: 0.9;
 }
-.main-nav{
+.main-nav {
   /* border: 1px solid #ff1dd6;
   padding: 15px;
   margin: 15px; */
-
-  
 }
-.brand-icon{
+.brand-icon {
   padding: 15px;
-  background:linear-gradient(135deg,#1da1ff,#cdaaffa4);
+  background: linear-gradient(135deg, #1da1ff, #cdaaffa4);
   border-radius: 25%;
   font-size: 30px;
   border: 2px solid #3afffc;
-
 }
-.nav-list{
+.nav-list {
   color: #ffffff;
   list-style-type: none;
   display: flex;
@@ -78,7 +81,7 @@ body {
   align-items: center;
 }
 
-.nav-list a{
+.nav-list a {
   color: #ffffff;
   text-decoration: none;
   padding: 12px 16px;
@@ -91,7 +94,7 @@ body {
   color: #1da1ff;
   cursor: pointer;
 }
-.left-content{
+.left-content {
   /* border: 1px solid #ff1dd6;
   padding: 15px;
   margin: 15px;  */
@@ -107,47 +110,132 @@ body {
   margin: 15px; 
    */
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr; 
+  grid-template-columns: 1.5fr 0.8fr;
   gap: 16px;
-background:linear-gradient(100deg,#fff,#6d99ff8d);
-border-radius: 12px;
-padding: 24px 36px;
-box-shadow: 0 4px 12px  #8b8b8b;
+  background: linear-gradient(100deg, #fff, #fff, #7ce0ff);
+  border-radius: 12px;
+  padding: 24px 36px;
+  box-shadow: 0 4px 12px #8b8b8b;
 }
-
+/* carทั้งหมด */
 .card {
-  border: 1px solid #20004e;
+  /* border: 1px solid #20004e;
   padding: 15px;
-  margin: 15px; 
+  margin: 15px; */
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px 36px;
+  box-shadow: 0 4px 12px #8b8b8b;
 }
 
-.right-sidebar{
+.right-sidebar {
   border: 1px solid #ff1dd6;
   padding: 15px;
-  margin: 15px; 
-
+  margin: 15px;
 }
-.hero-text{
-color: #022881;
+.hero-text {
+  color: #022881;
 }
-.hero-text h1{
-color: #022370;
-font-size: 40px;
+.hero-text h1 {
+  color: #022370;
+  font-size: 40px;
 }
-.hero-text p{
-color: hsl(222, 100%, 66%);
-font-size: 20px;
-font-weight: 100;
+.hero-text p {
+  color: hsl(222, 100%, 66%);
+  font-size: 20px;
+  font-weight: 100;
 }
-.hero-photo{
-
-
+.hero-photo {
 }
 
-.hero-photo img{
+.hero-photo img {
   border: 5px solid #071179;
   width: 400px;
   height: 200px;
   border-radius: 20px;
+}
+/* link examle */
+.card-header-title {
+  display: flex;
+  gap: 10px;
+  color: #022881;
+  align-items: center;
+}
+.card-body-grid {
+  /* background-color: #ffc31f; */
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 10px;
+}
+/* การ์ดด้านซ็าย */
+.result-panel , .code-panel{
+  border: 1px solid rgb(29, 33, 255);
+  border-radius: 10px;
+ overflow: hidden;
+  
+}
+.result-panel-title {
+  background-color: #1da1ff;
+  padding: 6px 15px;
+  
+}
+.result-panel-body {
+  padding: 6px 15px;
 
+}
+
+.result-panel-body a {
+  display: block;
+ color: #071179;
+}
+.result-panel-body a:hover{
+  color: #ff1e87;
+  text-decoration: none;
+}
+
+.mail-icon{
+  background-color: #071179;
+  border-radius: 5px;
+padding: 5px;
+}
+.back-btn{
+  border: 1px solid #022881;
+  border-radius: 5px;
+  display: inline-block !important;
+  padding: 2px 15px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+/* panel ด้านขวา */
+.code-panel-body{
+  background-color: rgb(0, 5, 34);
+  min-height: 160px;
+}
+.code-list{
+  color: #ffffff;
+  padding:30px;
+  /* list-style-type: none; */
+}
+.code-list li{
+  color: #ffffff;
+  padding:0px 20px;
+  /* list-style-type: none; */
+}
+.tag{ color: #ff2a2a;}
+.attr{ color: #50c433;}
+.value{ color: #198000;}
+
+/* .photo1{
+  background-color: #96d3ff;
+  border: 2px solid #00a9c7;
+  border-radius: 20px;
+} */
+.result-panel-body-3g{
+  padding: 6px 15px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 20px;
+  align-items: center;
+  
 }
