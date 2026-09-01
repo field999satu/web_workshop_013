@@ -239,3 +239,114 @@ padding: 5px;
   align-items: center;
   
 }
+
+.right-sidebar {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.side-card {
+background-color: #ffffff;
+border-radius: 12px;
+padding: 20px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+border: 1px solid #e0e0e0;
+}
+
+.side-card-title {
+color: #022881;
+font-size: 16px;
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+gap: 8px;
+font-weight: bold;
+}
+
+/* Numbered Lists in Sidebar */
+.side-list {
+counter-reset: custom-counter;
+list-style: none;
+padding: 0;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.side-list li {
+counter-increment: custom-counter;
+display: flex;
+align-items: flex-start;
+gap: 12px;
+font-size: 14px;
+color: #444;
+line-height: 1.5;
+}
+
+.side-list li::before {
+content: counter(custom-counter);
+background-color: #1da1ff;
+color: white;
+width: 22px;
+height: 22px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 12px;
+font-weight: bold;
+flex-shrink: 0;
+}
+
+
+.side-list.colorful li:nth-child(1)::before { background-color: #1da1ff; }
+.side-list.colorful li:nth-child(2)::before { background-color: #4caf50; }
+.side-list.colorful li:nth-child(3)::before { background-color: #ff9800; }
+.side-list.colorful li:nth-child(4)::before { background-color: #9c27b0; }
+.side-list.colorful li:nth-child(5)::before { background-color: #e91e63; }
+.side-list.colorful li:nth-child(6)::before { background-color: #009688; }
+
+.tag-pills {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+.pill {
+padding: 4px 12px;
+border-radius: 20px;
+font-size: 13px;
+font-family: monospace;
+font-weight: bold;
+display: inline-block;
+}
+
+.pill-blue { background-color: #e3f2fd; color: #1976d2; }
+.pill-green { background-color: #e8f5e9; color: #388e3c; }
+.pill-orange { background-color: #fff3e0; color: #f57c00; }
+.pill-pink { background-color: #fce4ec; color: #c2185b; }
+.pill-teal { background-color: #e0f2f1; color: #00796b; }
+.pill-yellow { background-color: #fffde7; color: #fbc02d; }
+
+
+.submit-card .side-card-title {
+color: #d84315;
+margin-bottom: 8px;
+}
+
+.submit-card p {
+font-size: 14px;
+color: #555;
+padding-left: 30px; /* Align text under title icon */
+}
+
+.hero-text {
+color: #022881;
+}
+
+.submit-card {
+  background-color: #fff3e0;
+  border-radius: 12px;
+  padding: 24px 36px; 
+}
