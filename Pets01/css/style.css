@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root {
+    /* สีหลักของเว็บไซต์ */
+    --primary-color: #fefcfc;       /* ชมพูพาสเทล */
+    --primary-dark-color: #E87591;  /* ชมพูเข้ม */
+    --secondary-color: #ffa1ff;     /* ฟ้าพาสเทล */
+
+    /*สีข้อความ*/
+    --mute-text-color:gray;
+    --nav-text-color:black;
+    --light-text-color:white;
+    
+    /*สีพื้นหลัง*/
+    --header-bg-color:rgb(253, 11, 11);
+    --light-bg-color:rgb(254, 254, 254);
+
+    /*สีเงา*/
+    --header-shadow:0 4px 6px rgb(112, 112, 112);
+    --card-shadow:0 3px 6px rgb(165, 165, 165);
+}
+
+.html {
+    scroll-behavior: smooth;
+    /*font-size: 16px;*/
+}
+
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #39d4ff;
+   
+
+}
+
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+
+
+/*===================================
+                Header
+======================================*/  
+.header {
+    background-color: rgba(255, 104, 237, 0.534);
+    box-shadow: var(--header-shadow);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    text-align: center;
+    
+    padding-block: 2rem;
+}
+
+.header-title {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 5vw ,3rem);
+}
+
+.header-subtitle {
+    color: var(--mute-text-color);
+}
+
+/*===================================
+                Navbar
+======================================*/ 
+nav {
+    text-align: center;
+    padding-block: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: var(--nav-text-color);
+    background-color: var(--light-bg-color);
+    padding: 0.7rem 1.2rem;
+    margin: 0.5rem;
+
+    border-radius: 999px;
+    box-shadow: var(--card-shadow);
+
+    cursor: pointer;
+
+    transition: transform 0.5s, box-shadow 0.2s;
+    display: inline-block;
+    user-select: none;
+}
+
+nav a:hover {
+    transform: scale(1.5);
+    box-shadow: 0 6px 14px gray;
+}
+
+nav a.active {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+/*===================================
+                Main
+======================================*/ 
+
+.container {
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.pet-card {
+    background-color: var(--light-bg-color);
+    box-shadow: var(--card-shadow);
+
+    border-radius: 0.75rem;
+    overflow: hidden;
+
+    transition: transform 0.3s;
+}
+
+.pet-card:hover{
+    transform: translateY(-8px);
+
+}
+
+.pet-card img {
+    height: 16.25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pet-content {
+    padding: 1.25rem;
+}
+
+.pet-content h2{
+    color: var(--primary-dark-color);
+
+}
+
+.breed {
+    color: var(--mute-text-color);
+}
+
+/*==================================
+            Advice-container
+=====================================*/
+
+.advice-container {
+    border-radius: 0.75rem;
+    max-width: 1280px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: var(--header-shadow);
+}
+
+.advice-title {
+    text-align: center;
+    font-size: 1.7rem;
+    padding-top: 1.7rem;
+}
+
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem;
+    margin: 2rem;
+    padding-bottom: 2rem;
+}
+
+.advice-card {
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: #333333;
+}
+
+.advice-card h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #050505; 
+  font-weight: 600;
+}
+
+.advice-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #696363;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------
+   กำหนดสีพื้นหลังการ์ด และ สีของหัวข้อ (h3)
+   --------------------------------------------------- */
+
+/* 1. การ์ดใบแรก - สีฟ้า */
+.advice-grid .advice-card:nth-child(1) {
+    background-color: #e2edfb; 
+}
+.advice-grid .advice-card:nth-child(1) h3 {
+    color: #2e5481; /* สีฟ้าเข้ม */
+}
+
+/* 2. การ์ดใบที่สอง - สีม่วง */
+.advice-grid .advice-card:nth-child(2) {
+    background-color: #f3e8fa; 
+}
+.advice-grid .advice-card:nth-child(2) h3 {
+    color: #5d3b75; /* สีม่วงเข้ม */
+}
+
+/* 3. การ์ดใบที่สาม - สีเขียว */
+.advice-grid .advice-card:nth-child(3) {
+    background-color: #def8e9; 
+}
+.advice-grid .advice-card:nth-child(3) h3 {
+    color: #256643; /* สีเขียวเข้ม */
+}
+
+/* 4. การ์ดใบที่สี่ - สีส้มพีช */
+.advice-grid .advice-card:nth-child(4) {
+    background-color: #faebd6; 
+}
+.advice-grid .advice-card:nth-child(4) h3 {
+    color: #8c5a2b; /* สีน้ำตาล/ส้มเข้ม */
+}
+
+/*===================================
+                Footer
+======================================*/ 
+
+footer {
+    padding-block: 2rem;
+    background-color: #ffc9fcd9;
+
+    color: var(--light-text-color);
+    margin-top: 1.5rem;
+
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
