@@ -7,14 +7,15 @@
 
 :root {
     /* สีหลักของเว็บไซต์ */
-    --primary-color: #fefcfc;       /* ชมพูพาสเทล */
-    --primary-dark-color: #E87591;  /* ชมพูเข้ม */
-    --secondary-color: #ffa1ff;     /* ฟ้าพาสเทล */
-
+    --primary-color: #fefcfc;       
+    --primary-dark-color: #E87591;  
+    --secondary-color: #ffa1ff;     
+    --pont-color: #9cf2ff; /* สีของตัวอักษร */
     /*สีข้อความ*/
     --mute-text-color:gray;
     --nav-text-color:black;
     --light-text-color:white;
+    --dark-text-color:black;
     
     /*สีพื้นหลัง*/
     --header-bg-color:rgb(253, 11, 11);
@@ -23,6 +24,7 @@
     /*สีเงา*/
     --header-shadow:0 4px 6px rgb(112, 112, 112);
     --card-shadow:0 3px 6px rgb(165, 165, 165);
+    --border: 1px solid #464646;
 }
 
 .html {
@@ -78,12 +80,12 @@
 /*===================================
                 Navbar
 ======================================*/ 
-nav {
+nav{
     text-align: center;
     padding-block: 2rem;
 }
 
-nav a {
+nav label {
     text-decoration: none;
 
     color: var(--nav-text-color);
@@ -100,16 +102,56 @@ nav a {
     display: inline-block;
     user-select: none;
 }
+.filter-radio{
+    /* display: none; */
+    position: absolute;
 
-nav a:hover {
+    overflow: hidden;
+    width: 1px;
+    clip-path: inset(50%);
+}
+nav label:hover {
     transform: scale(1.5);
     box-shadow: 0 6px 14px gray;
 }
-
-nav a.active {
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
+nav label:has(input:checked) {
+  background-color: #a5f0ff;
+  color: var(--light-text-color);
 }
+
+#filter-all:checked ~ nav label[for="filter-all"],
+#filter-dog:checked ~ nav label[for="filter-dog"],
+#filter-cat:checked ~ nav label[for="filter-cat"],
+#filter-bird:checked ~ nav label[for="filter-bird"],
+#filter-fish:checked ~ nav label[for="filter-fish"],
+#filter-small-pets:checked ~ nav label[for="filter-small-pets"]
+{
+  background-color: #a5f0ff;
+  color: var(--light-text-color);
+}
+
+.catagory-title {
+    display: none;
+}
+#filter-all:checked ~ main .title-all,
+#filter-dog:checked ~ main .title-dog,
+#filter-cat:checked ~ main .title-cat,
+#filter-bird:checked ~ main .title-bird,
+#filter-fish:checked ~ main .title-fish,
+#filter-small-pets:checked ~ main .title-small-pets
+{
+    display: inline;
+}
+
+#filter-dog:checked ~ main .pet-card:not(.pet-dog),
+#filter-cat:checked ~ main .pet-card:not(.pet-cat),
+#filter-bird:checked ~ main .pet-card:not(.pet-bird),
+#filter-fish:checked ~ main .pet-card:not(.pet-fish),
+#filter-small-pets:checked ~ main .pet-card:not(.pet-small-pets)
+{
+    display: none;
+}
+
 /*===================================
                 Main
 ======================================*/ 
@@ -170,7 +212,7 @@ nav a.active {
 .advice-container {
     border-radius: 0.75rem;
     max-width: 1280px;
-    margin: 20px;
+    margin: auto;
     background-color: #ffffff;
     box-shadow: var(--header-shadow);
 }
@@ -259,11 +301,72 @@ footer {
     text-align: center;
 }
 
+/*===================================
+             learning forms
+======================================*/ 
+.learning-forms {
+    border-radius: 0.75rem;
+    max-width: 1280px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: var(--header-shadow);
+    padding: 1.5rem;
+}
+.learning-forms h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.learning-forms p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0;
+  color: #696363;
+  line-height: 1.6;
+}
+.learning-forms fieldset {
+    border: #464646 2px solid;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 0.75rem;
+}
+.learning-forms legend {    
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-dark-color);
+    padding: 0 0.5rem;
+}
+.radio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.radio-item input{
+    margin-right: 0.5rem;
+    accent-color: var(--pont-color);
+}
+.radio-item label:has(input:checked) {
+  background-color: #a5f0ff;
+  color: var(--light-text-color);
+}
+.radio-item label {
+    background-color:#f3e8fa;
+    color: var(--dark-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-
-
-
-
+.radio-item label:hover {
+    background-color: #a5f0ff;
+}
+.radio-option{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
 
