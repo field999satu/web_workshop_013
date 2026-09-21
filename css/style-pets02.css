@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     
+    
 }
 
 :root {
@@ -25,6 +26,14 @@
     --header-shadow:0 4px 6px rgb(112, 112, 112);
     --card-shadow:0 3px 6px rgb(165, 165, 165);
     --border: 1px solid #464646;
+    /* สีปุ่ม */
+    --btn-bg-color: #007bff;
+    --btn-hover-bg-color: #0056b3;
+    /* สีเพิ่มเติม */
+    --red-color: #ff0000;
+    --green-color: #00ff00;
+    --blue-color: #0000ff;
+
 }
 
 .html {
@@ -143,11 +152,11 @@ nav label:has(input:checked) {
     display: inline;
 }
 
-#filter-dog:checked ~ main .pet-card:not(.pet-dog),
-#filter-cat:checked ~ main .pet-card:not(.pet-cat),
-#filter-bird:checked ~ main .pet-card:not(.pet-bird),
-#filter-fish:checked ~ main .pet-card:not(.pet-fish),
-#filter-small-pets:checked ~ main .pet-card:not(.pet-small-pets)
+#filter-dog:checked ~ main .pet-card:not(.show-dog),
+#filter-cat:checked ~ main .pet-card:not(.show-cat),
+#filter-bird:checked ~ main .pet-card:not(.show-bird),
+#filter-fish:checked ~ main .pet-card:not(.show-fish),
+#filter-small-pets:checked ~ main .pet-card:not(.show-small-pets)
 {
     display: none;
 }
@@ -167,7 +176,7 @@ nav label:has(input:checked) {
 
 .pet-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
@@ -367,7 +376,137 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
 }
+/* รายละเอียดเพิ้มเติม */
+.pet-info {
+    list-style-type: none;
+}.info-lifespan {
+    color: var(--red-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+.info-size {
+    color: var(--green-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+.info-temperament {
+    color: var(--blue-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+.advice-container{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.pet-btn {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    color: var(--light-text-color);
+    text-align: center;
+    background:linear-gradient(90deg, #63c1ff, #596fff);
 
+    cursor: pointer;
+    transition: transform 0.8s, background 5s;
+}
+.pet-btn:hover {
+    background:linear-gradient(90deg, #596fff, #63c1ff);
+    transform: scale(1.05);
+}
+.hide-detail {display: none;}
 
+.pet-details[open] .show-detail {display: none;}
+.pet-details[open] .hide-detail {display: inline;}
 
+.pet-details summary {
+    list-style: none;
+}
+.pet-details-body {
+    padding: 1rem;
+    background-color: #f3e8fa;
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+
+    animation: apper 3s ease-out;
+}
+
+.table-responsive {
+   border-radius: 0.75rem;
+    max-width: 1280px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: var(--header-shadow);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+.pet-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.pet-table th{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    
+}
+.pet-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    transition: background-color 0.3s;
+}
+.pet-table caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    
+}
+.guide-note {
+    font-size: 0.9rem;
+    color: var(--red-color);
+    text-align: center;
+    margin-top: 1rem;
+    
+}
+.pet-table thead th{
+    background-color: #ffd0f4;
+    color: var(--dark-text-color);
+}
+.pet-table tbody th{
+    background-color: #ffeefb;
+    color:#820075;
+    white-space: nowrap;
+}
+.pet-table td:hover {
+    background-color: #f3e8fa;
+}
+
+/* .pet-table th:nth-child(1) {width: 300px;} */
+.pet-table th:nth-child(3) {width: 150px;}
+.pet-table th:nth-child(5) {width: 150px;}
+@keyframes apper {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1;}
+}
+
+/* responsive */
+@media (max-width: 992px) {
+    .pet-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 50px;}
+    
+    .category-title {
+        display: block;
+        margin: 0.5rem 1rem;
+    }
+    
+}
+@media (max-width: 768px) {
+    .pet-grid {
+      grid-template-columns: 1fr;
+      margin: 0 20px;
+    }
+}   
 
