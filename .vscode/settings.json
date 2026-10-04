@@ -1,3 +1,4 @@
 {
-  "livePreview.defaultPreviewPath": "/W04-formatting.html"
+  "livePreview.defaultPreviewPath": "/W04-formatting.html",
+  "liveServer.settings.port": 5501
 }

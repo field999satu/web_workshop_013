@@ -1,0 +1,112 @@
+/* =========================================
+   Base & Reset
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { font-family: sans-serif; line-height: 1.6; }
+
+/* =========================================
+   1. Navbar (Flexbox)[cite: 1]
+   ========================================= */
+.navbar {
+    /* TODO: ใช้ flex จัดตำแหน่งซ้าย ขวา กลาง[cite: 1] */
+}
+.nav-links {
+    /* TODO: ใช้ flex จัดระยะห่างของลิงก์ */
+}
+
+/* =========================================
+   2. Hero Section (Grid & Button Display)[cite: 1]
+   ========================================= */
+.hero {
+    /* TODO: แบ่งคอลัมน์ด้วย grid เพื่อให้รองรับ responsive[cite: 1] */
+}
+.btn {
+    /* TODO: สไตล์ปุ่มพื้นฐาน */
+}
+.btn-primary {
+    /* TODO: กำหนด display เพื่อเปรียบเทียบ[cite: 1] */
+}
+.btn-secondary {
+    /* TODO: กำหนด display แบบ inline หรือ inline-block เพื่อให้เห็นความต่างเรื่อง Padding/Margin[cite: 1] */
+}
+
+/* =========================================
+   3. Card Section (Grid Responsive)[cite: 1]
+   ========================================= */
+.card-grid {
+    /* TODO: แบ่งคอลัมน์การ์ดด้วย grid[cite: 1] (ตั้งค่าเริ่มต้นสำหรับ Desktop) */
+}
+
+/* =========================================
+   4. Form Section[cite: 1]
+   ========================================= */
+input[type="text"], input[type="email"] {
+    /* TODO: ทำให้ input ยืดเต็มความกว้าง (width: 100%)[cite: 1] */
+}
+.form-group-row {
+    /* TODO: แบ่ง input text เป็น 2 คอลัมน์เพื่อรองรับ responsive[cite: 1] */
+}
+.btn-submit {
+    /* TODO: สไตล์ปุ่ม submit และทำให้เต็มความกว้าง[cite: 1] */
+}
+
+/* =========================================
+   5. Media Queries สำหรับ Mobile, Tablet, Desktop[cite: 1]
+   ========================================= */
+
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
+    /* TODO: ปรับจำนวนคอลัมน์ของ .card-grid ให้เหลือ 2 คอลัมน์[cite: 1] */
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 767px) {
+    /* TODO: เปลี่ยน flex-direction ของ .navbar ให้ซ้อนกันแนวตั้ง[cite: 1] */
+    
+    /* TODO: ปรับ .hero ให้เหลือ 1 คอลัมน์[cite: 1] */
+    
+    /* TODO: ทำให้ปุ่ม .btn-primary ยืดเต็มความกว้างเป็น display: block[cite: 1] */
+    
+    /* TODO: ปรับคอลัมน์ของ .form-group-row ให้ยุบเหลือ 1 คอลัมน์ซ้อนกัน[cite: 1] */
+    
+    /* TODO: ปรับ .card-grid ให้เหลือ 1 คอลัมน์[cite: 1] */
+}
+
+=========================================
+   6. Additional Styles (Optional)
+   ========================================= */
+/* 1. โค้ดตรงนี้สำหรับ Mobile ทั้งหมด (ไม่ต้องมี Media Query) */
+.container {
+    width: 100%;
+    padding: 1rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile 1 คอลัมน์ */
+}
+
+/* 2. เมื่อจอใหญ่พอจะเป็น Tablet (กว้าง 768px ขึ้นไป) */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr; /* ขยายเป็น 2 คอลัมน์ */
+    }
+}
+
+/* 3. เมื่อจอใหญ่พอจะเป็น Desktop (กว้าง 1024px หรือ 1025px ขึ้นไป) */
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* ขยายเป็น 3 คอลัมน์ */
+    }
+}
+
+/* 4. คุมจอใหญ่พิเศษ ไม่ให้เว็บยืดจนพัง */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto; /* จัดให้อยู่กึ่งกลางจอ */
+    }
+}

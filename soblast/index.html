@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon 2026 - Mock Exam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Navbar[cite: 1] -->
+    <header class="navbar">
+        <div class="logo">TechCon 2026</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Speakers</a>
+            <a href="#">Register</a>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section[cite: 1] -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>สัมผัสเทคโนโลยีแห่งอนาคต</h1>
+                <p>งานสัมมนาที่รวมนักพัฒนาชั้นนำของประเทศ</p>
+                <!-- จุดที่ต้องทดสอบการใช้ inline, inline-block และ block แบบยืดเต็ม[cite: 1] -->
+                <a href="#" class="btn btn-primary">ลงทะเบียนเลย</a>
+                <a href="#" class="btn btn-secondary">อ่านเพิ่มเติม</a>
+            </div>
+            <div class="hero-image">
+                <div class="placeholder-img">Image Area</div>
+            </div>
+        </section>
+
+        <!-- 3. Card Section[cite: 1] -->
+        <section class="cards-section">
+            <h2>Speakers</h2>
+            <div class="card-grid">
+                <div class="card">Speaker 1</div>
+                <div class="card">Speaker 2</div>
+                <div class="card">Speaker 3</div>
+            </div>
+        </section>
+
+        <!-- 4. Form Section[cite: 1] -->
+        <section class="form-section">
+            <h2>ลงทะเบียนล่วงหน้า</h2>
+            <form action="#" class="register-form">
+                <!-- จุดที่ต้องจัด Layout 2 คอลัมน์บน Desktop และ 1 คอลัมน์บน Mobile[cite: 1] -->
+                <div class="form-group-row">
+                    <!-- ต้องใส่ type text, placeholder, required[cite: 1] -->
+                    <input type="text" placeholder="ชื่อ" required>
+                    <input type="text" placeholder="นามสกุล" required>
+                </div>
+                
+                <div class="form-group">
+                    <!-- ต้องใส่ type email, placeholder, required[cite: 1] -->
+                    <input type="email" placeholder="อีเมลของคุณ" required>
+                </div>
+
+                <div class="form-group radio-group">
+                    <p>เลือกประเภทบัตร:</p>
+                    <!-- ต้องใส่ type radio[cite: 1] -->
+                    <label><input type="radio" name="ticket" value="standard" required> Standard</label>
+                    <label><input type="radio" name="ticket" value="vip"> VIP</label>
+                </div>
+
+                <!-- ปุ่ม Submit[cite: 1] -->
+                <button type="submit" class="btn-submit">ยืนยันการลงทะเบียน</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
